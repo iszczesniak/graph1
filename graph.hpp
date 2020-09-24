@@ -2,7 +2,6 @@
 #define GRAPH_HPP
 
 #include <list>
-#include <ostream>
 #include <set>
 #include <string>
 #include <tuple>
@@ -83,9 +82,6 @@ struct edge
       std::tie(b.m_source, b.m_target, b.m_cost, b.m_units);
   }
 };
-
-std::ostream &
-operator<<(std::ostream &, const edge &e);
 
 // The graph.
 struct graph

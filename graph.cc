@@ -1,20 +1,5 @@
 #include "graph.hpp"
 
-#include "utils.hpp"
-
-#include <iterator>
-#include <ostream>
-
-std::ostream &
-operator<<(std::ostream &out, const edge &e)
-{
-  out << "edge(" << name(source(e)) << " -> " << name(target(e))
-      << ", " << "cost = " << cost(e) << ", units = " << units(e)
-      << ")";
-
-  return out;
-}
-
 Index<vertex>
 index(const vertex &v)
 {
