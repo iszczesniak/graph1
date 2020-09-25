@@ -1,25 +1,25 @@
 #include "graph.hpp"
 
 Index<vertex>
-index(const vertex &v)
+get_index(const vertex &v)
 {
   return v.m_index;
 }
 
 const std::string &
-name(const vertex &v)
+get_name(const vertex &v)
 {
   return v.m_name;
 }
 
 const std::vector<edge> &
-edges(const vertex &v)
+get_edges(const vertex &v)
 {
   return v.m_edges;
 }
 
 const graph::vertexes_type &
-vertexes(const graph &g)
+get_vertexes(const graph &g)
 {
   return g.m_vertexes;
 }
@@ -31,31 +31,31 @@ num_vertexes(const graph &g)
 }
 
 const vertex &
-source(const edge &e)
+get_source(const edge &e)
 {
   return e.m_source;
 }
 
 const vertex &
-target(const edge &e)
+get_target(const edge &e)
 {
   return e.m_target;
 }
 
 const edge::cost_type &
-cost(const edge &e)
+get_cost(const edge &e)
 {
   return e.m_cost;
 }
 
 const edge::units_type &
-units(const edge &e)
+get_units(const edge &e)
 {
   return e.m_units;
 }
 
 const vertex::units_type &
-units(const vertex &v)
+get_units(const vertex &v)
 {
   return v.m_units;
 }

@@ -192,34 +192,34 @@ using Units = typename units_traits<T>::type;
 // The functions.
 
 Index<vertex>
-index(const vertex &);
+get_index(const vertex &);
 
 const std::string &
-name(const vertex &);
+get_name(const vertex &);
 
 const std::vector<edge> &
-edges(const vertex &);
+get_edges(const vertex &);
 
 const graph::vertexes_type &
-vertexes(const graph &);
+get_vertexes(const graph &);
 
 graph::size_type
 num_vertexes(const graph &);
 
 const vertex &
-source(const edge &);
+get_source(const edge &);
 
 const vertex &
-target(const edge &);
+get_target(const edge &);
 
 const edge::cost_type &
-cost(const edge &);
+get_cost(const edge &);
 
 const edge::units_type &
-units(const edge &);
+get_units(const edge &);
 
 const vertex::units_type &
-units(const vertex &);
+get_units(const vertex &);
 
 vertex &
 add_vertex(graph &g, const std::string name,
