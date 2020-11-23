@@ -34,7 +34,7 @@ struct vertex
   {
   }
 
-  bool operator==(const vertex &b) const
+  bool operator == (const vertex &b) const
   {
     return this == &b;
   }
@@ -69,14 +69,14 @@ struct edge
   {
   }
 
-  // We need this operator to establish order between edges.  This is
-  // needed by the generic_label which defines order between labels.
-  bool operator<(const edge &b) const
+  // We need this operator to establish order between edges.  This
+  // operator is needed by the < operator for solutions.
+  bool operator < (const edge &b) const
   {
     return this < &b;
   }
 
-  bool operator==(const edge &b) const
+  bool operator == (const edge &b) const
   {
     return std::tie(m_source, m_target, m_cost, m_units) ==
       std::tie(b.m_source, b.m_target, b.m_cost, b.m_units);
