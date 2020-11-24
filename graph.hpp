@@ -15,7 +15,8 @@ struct edge;
 
 struct vertex
 {
-  using units_type = std::set<unsigned>;
+  using unit_type = unsigned;
+  using units_type = std::set<unit_type>;
   using edges_type = std::vector<edge>;
   using index_type = edges_type::size_type;
 
@@ -50,7 +51,8 @@ struct vertex
 struct edge
 {
   using cost_type = unsigned;
-  using units_type = std::set<unsigned>;
+  using unit_type = unsigned;
+  using units_type = std::set<unit_type>;
 
   // The source node of the edge.
   const vertex &m_source;
