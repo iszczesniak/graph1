@@ -202,8 +202,14 @@ get_name(const vertex &);
 const std::vector<edge> &
 get_edges(const vertex &);
 
+std::vector<edge> &
+get_edges(vertex &);
+
 const graph::vertexes_type &
 get_vertexes(const graph &);
+
+graph::vertexes_type &
+get_vertexes(graph &);
 
 graph::size_type
 num_vertexes(const graph &);
@@ -219,6 +225,9 @@ get_cost(const edge &);
 
 const edge::units_type &
 get_units(const edge &);
+
+edge::units_type &
+get_units(edge &);
 
 const vertex::units_type &
 get_units(const vertex &);

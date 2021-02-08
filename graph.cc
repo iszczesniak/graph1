@@ -18,8 +18,20 @@ get_edges(const vertex &v)
   return v.m_edges;
 }
 
+std::vector<edge> &
+get_edges(vertex &v)
+{
+  return v.m_edges;
+}
+
 const graph::vertexes_type &
 get_vertexes(const graph &g)
+{
+  return g.m_vertexes;
+}
+
+graph::vertexes_type &
+get_vertexes(graph &g)
 {
   return g.m_vertexes;
 }
@@ -50,6 +62,12 @@ get_cost(const edge &e)
 
 const edge::units_type &
 get_units(const edge &e)
+{
+  return e.m_units;
+}
+
+edge::units_type &
+get_units(edge &e)
 {
   return e.m_units;
 }
